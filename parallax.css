@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+html,body{
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+    margin:0;
+}
+
+.scence1{
+    background-image: url(space1.jpeg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.h1{
+    font-size: 30px;
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+}
+
+.h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    border-bottom: 1px solid white;
+    margin: 20px auto;
+  }
+
+header{
+    text-align: center;
+    position: relative;
+    top: 40%;
+    color: white;
+}
+
+.scence2{
+    background-image: url(space2.jpeg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.scence3{
+    background-image: url(space3.jpeg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

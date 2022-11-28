@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+html{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 200;
+}
+
+body{
+    background-image: url(https://picsum.photos/1600/900);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height:100vh;
+    min-width: 100vh;
+    margin:0;
+
+}
+
+article{
+    background-color: rgba(255, 255, 255, 0.5);
+    color:black;
+    max-width: 30rem;
+    position: fixed;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:1rem;
+    padding:0.2rem;
+    font-weight: 200;
+    margin-left: 3rem;
+}
+
+.control{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding:0.3rem;
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+.control ul{
+    list-style: none;
+}
+
+.control ul li{
+    display: inline-block;
+    padding:0 0.7rem;
+}
+
+.control a{
+    color:white;
+    text-decoration: none;
+}
+
+.control >*{
+    display:inline-block;
+    padding:0 0.7rem;
+}
+
+.control .player{
+    position: absolute;
+    right:0.7rem;
+    margin-right: 3rem;
+    
+}
+
+span{
+    display: none;
+}
+
+.player a:hover{
+    color:black
+}
+
+.player .icon-stop{
+    color:black;
+}

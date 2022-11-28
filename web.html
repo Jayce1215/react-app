@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="fontello_tree/css/fontello.css">
+    <link rel="stylesheet" href="web.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+</head>
+<body>
+    <div class="btn">
+        <a href="#blue" class="btn-blue">Blue</a>
+        <a href="#red" class="btn-red">Red</a>
+    </div>
+
+    <div class="thumbnail"></div>
+
+    <div id="columns">
+        <img src="la.jpeg" alt="">
+        <img src="la.jpeg" alt="">
+        <img src="la.jpeg" alt="">
+        <img src="la.jpeg" alt="">
+        <img src="la.jpeg" alt="">       
+    </div>
+  
+    <ul class="tree">
+        <li>
+            <input type="checkbox" id="root"> 
+            <label for="root">Root</label>    
+            <ul class="branch">
+                <li>node1</li>
+                <li>node2</li>
+                <li>
+                    <input type="checkbox" id="node3">
+                    <label for="node3">node3</label>
+                    <ul>
+                        <li>node3-1</li>
+                        <li>node3-2</li>
+                    </ul>
+                </li>
+                <li>node4</li>
+                <li>node5</li>
+
+                
+            </ul>
+        </li>
+    </ul>    
+    <form action="#">
+        <input type="text">
+        <input type="submit">
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+    <script>
+        var c1 = new mojs.Shape({
+            shape:'circle',
+            left:0,
+            top:0,
+            radius:{0:'rand(10,55)'},
+            duration:300,
+            delay:0,
+            fill:'white',
+            stroke:'cyan',
+            strokeWidth:{20:0},
+        });
+        var cn = [];
+        var colors = ['cyan', 'magenta', 'tomato']
+        for (var i = 0; i<4; i++){
+            var c2 = new mojs.Shape({
+            parent:c1.el,
+            shape:'circle',
+            left:'50%',
+            top:'50%',
+            radius:{0:'rand(25,55)'},
+            duration:300,
+            delay:0,
+            fill:'white',
+            stroke: colors[i],
+            strokeWidth:{10:0},
+            });
+            cn.push(c2);
+        }
+
+        
+        document.addEventListener('click',function(e){
+            c1.generate().tune({x:e.pageX, y:e.pageY}).replay();
+            for(var i = 0; i<cn.length; i++){
+                cn[i].replay();
+            }
+        })
+    </script>
+
+</body>
+</html>

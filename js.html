@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="js.css">
+
+</head>
+<body>
+    <div class="black-bg">
+        <div class="white-bg">
+          <h4>로그인하세요</h4>
+          <button class="btn btn-danger" id="close">닫기</button>
+        </div>
+      </div> 
+
+    <div id="alert">
+        <p class="content">내용</p>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+
+    <input type="button" id="idButton" value="ID" onclick="loginBox('ID 입력')"></input>
+    <input type="button" id="pwButton" value="Password" onclick="loginBox('PW 입력')"></input>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand">Navbar</span>
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav> 
+
+      <ul class="list-group">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+      </ul>
+
+    <script>
+        document.querySelector('.navbar-toggler').addEventListener('click',function(){
+            document.querySelectorAll('.list-group')[0].classList.toggle('show');
+        })
+    </script>
+
+    <!-- <script>
+        function loginBox(a){
+            document.getElementsByClassName('content')[0].innerHTML = a;
+            document.getElementById('alert').style.display = 'block';
+        }
+       
+        document.getElementsByClassName("btn-close").addEventListener('click',function(){
+            document.getElementById('alert').style.display='none';
+        });
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <p class="hi">Hi</p>
+    <p class="hi">Hi</p>
+    <p class="hi">Hi</p>
+    <button id="test-btn">button</button>
+
+    <script>
+        $('.hi').html('No');
+        $('.hi').css('color','blue');
+        $('.hi').toggleClass('show');
+        $('#test-btn').on('click',function(){
+            $('.black-bg').css('display','block');
+        });
+        $('#close').on('click',function(){
+            $('.black-bg').css('display','none');
+        })
+
+    </script>
+
+</body>
+</html>
+
